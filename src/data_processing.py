@@ -1,8 +1,8 @@
 import pandas as pd
 
-def cargar_y_limpiar_datos(ruta):
+def cargar_y_limpiar_datos(nombre_ruta):
 #Carga el dataset y estandariza las fechas.    
-    df = pd.read_csv(ruta)
+    df = pd.read_csv(nombre_ruta)
     df['fecha_registro'] = pd.to_datetime(df['fecha_registro'])
     
 #Rellenar o eliminar nulos si existiesen
