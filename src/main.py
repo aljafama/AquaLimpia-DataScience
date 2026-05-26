@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-def procesar_datos_aqualimpia():
+def procesar_datos_aqualimpia(ruta_archivo):
     # Cargar datos
-        df = pd.read_csv()
+        df = pd.read_csv(ruta_archivo)
 
     # Crear carpeta de salidas
         os.makedirs('outputs',exist_ok=True)
@@ -20,7 +20,7 @@ def procesar_datos_aqualimpia():
     # 2. Salida para Área de Gestión Ambiental
         cols_ambiental = ['fecha_registro','planta','DBO_salida_mg_L','cumplimiento_norma']
         df_ambiental=df[cols_ambiental]
-        df_ambiental.to_csv=('outputs/gestion_ambiental.csv',index=False)
+        df_ambiental.to_csv('outputs/gestion_ambiental.csv',index=False)
 
     # 3. Dashboard Exploratorio (Visualizaciones)
         fig,axes=plt.subplot(2,2,figsize=(14,10))
@@ -51,7 +51,7 @@ def procesar_datos_aqualimpia():
         plt.show()
 
     #   Ejecución
-        if__name__=='__main__':
-        procesar_datos_aqualimpia('dataset_set_A_aguas_residuales.xlsx - sheet1.csv')
+        if __name__ == ' __ main __ ':
+            procesar_datos_aqualimpia('dataset_set_A_aguas_residuales.xlsx - sheet1.csv')
 
-                                  
+                                
